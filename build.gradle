@@ -21,11 +21,20 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+	// springboot web dependency
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	// springboot mongodb dependency
+	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+	// springboot jpa dependency (relational database like mysql, postgresql)
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	// springboot dev dependency
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	// springboot test dependency
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	// junit5 test dependency
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	// postgresql jdbc driver
+	runtimeOnly 'org.postgresql:postgresql'
 }
 
 tasks.named('test') {

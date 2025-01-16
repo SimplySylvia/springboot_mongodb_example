@@ -51,7 +51,7 @@ public class UserController {
     if (user == null) {
       throw new ResourceNotFoundException("User not found with id: " + id);
     }
-    return userService.getUserById(id);
+    return user;
   }
 
   /**
